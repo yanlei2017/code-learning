@@ -20,4 +20,6 @@ int main()
 	cout<<"stu1.name: "<<stu1.name<<endl;
 	cout<<"p_stu1>>name: "<<p_stu1->name<<endl;
 	cout<<"(**stu).name: "<<(*stu)->name<<endl;
+	system("pause");
+	return 0;
 }
