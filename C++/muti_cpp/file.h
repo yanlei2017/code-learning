@@ -1,6 +1,6 @@
 #include<iostream>
 #include<cmath>
-
+typedef unsigned int unint;
 struct polor
 {
 	double angle;
