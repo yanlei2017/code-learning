@@ -1,7 +1,7 @@
 #include<iostream>
-#include "Miya.h"
+#include "miya.h"
 
-Miya::Miya()
+/* Miya::Miya()
     {
         name="no name";
         age=0;
@@ -16,7 +16,7 @@ Miya::Miya()
         height=height_;
         weight=weight_;
     }
-
+ */
     void Miya::show() const
     {   
         using namespace std;
