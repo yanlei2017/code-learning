@@ -20,7 +20,8 @@ class time
     void reset(unint a,unint b);
     void addmin(unint a);
     void addhour(unint a);
-    friend time operator*(double a,const time & t)
+    friend time operator*(double a,const time & t)//a在前面，time在后面
+    //friend time operator*(const time & t,double a)
     {return t*a;}
     friend std::ostream & operator<<(std::ostream & os,const time & t);
 
