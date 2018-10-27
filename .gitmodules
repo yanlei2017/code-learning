@@ -1,0 +1,3 @@
+[submodule "c++/quad"]
+	path = c++/quad
+	url = git@github.com:yanlei2017/Quaternion_prove.git
