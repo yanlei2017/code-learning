@@ -23,6 +23,7 @@ int main(int argc, char const *argv[])
     cout<<"acos( "<<temp[1]<<" ) is : "<< radtodeg * acos(temp[1]) <<"°"<<endl;
 
     return 0;
+
 }
 
 

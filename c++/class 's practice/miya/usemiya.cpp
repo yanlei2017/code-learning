@@ -4,17 +4,17 @@
  {      
         using namespace std;
         
-        //Miya xiaoyang=Miya("xiaoyang",25,160,46);
-        Miya xiaoyang;
+        Miya xiaoyang=Miya("xiaoyang",25,160,46);
+       //  Miya xiaoyang;
         xiaoyang.show();
 
 
-        //Miya *yanlei=new Miya("yanlei",23,180,80);
-        Miya *yanlei=new Miya;
+        Miya *yanlei=new Miya("yanlei",23,180,80);
+       //  Miya *yanlei=new Miya;
         yanlei->show();
 
-        Miya Wust ; 
-        Wust.show();    
+        //Miya Wust ; 
+        //Wust.show();    
         return 0;
  }
  
