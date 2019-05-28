@@ -1,0 +1,9 @@
+# ninja log v5
+0	971	1559034982	CMakeFiles/hello.dir/src/c++/main.cpp.o	49fe75594c0e98be
+0	1047	1559034982	CMakeFiles/hello.dir/src/c++/hello.cpp.o	9394a6a2ec9af1d3
+1047	1315	1559034983	../bin/hello	2fb99bf688d51d7f
+2	1076	1559035088	CMakeFiles/hello.dir/src/c++/main.cpp.o	49fe75594c0e98be
+1076	1332	1559035089	../bin/hello	2fb99bf688d51d7f
+1	946	1559035451	CMakeFiles/hello.dir/src/c++/main.cpp.o	49fe75594c0e98be
+2	1024	1559035451	CMakeFiles/hello.dir/src/c++/hello.cpp.o	9394a6a2ec9af1d3
+1025	1259	1559035451	../bin/hello	2fb99bf688d51d7f

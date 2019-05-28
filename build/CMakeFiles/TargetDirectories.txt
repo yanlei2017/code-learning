@@ -1,0 +1,3 @@
+/home/yanlei/note/c++/build/CMakeFiles/rebuild_cache.dir
+/home/yanlei/note/c++/build/CMakeFiles/hello.dir
+/home/yanlei/note/c++/build/CMakeFiles/edit_cache.dir
