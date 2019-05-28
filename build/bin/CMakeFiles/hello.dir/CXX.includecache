@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/hello.hpp
+
+/home/yanlei/note/c++/src/c++/hello.cpp
+iostream
+-
+hello.hpp
+-
+
+/home/yanlei/note/c++/src/c++/main.cpp
+iostream
+-
+yanlei.hpp
+-
+hello.hpp
+-
+
