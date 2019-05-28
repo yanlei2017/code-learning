@@ -18,7 +18,7 @@ int main(int argc, char * argv[])
 	{
 	    srand(time(0));
 	    cout<<rand()<<endl;
-	    cout<<aha();
+	    cout<<aha()<<endl;
 	}
 
 double a=1e6f;
