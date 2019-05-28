@@ -1,3 +1,5 @@
 /home/yanlei/note/c++/build/CMakeFiles/rebuild_cache.dir
-/home/yanlei/note/c++/build/CMakeFiles/hello.dir
 /home/yanlei/note/c++/build/CMakeFiles/edit_cache.dir
+/home/yanlei/note/c++/build/bin/CMakeFiles/rebuild_cache.dir
+/home/yanlei/note/c++/build/bin/CMakeFiles/hello.dir
+/home/yanlei/note/c++/build/bin/CMakeFiles/edit_cache.dir
