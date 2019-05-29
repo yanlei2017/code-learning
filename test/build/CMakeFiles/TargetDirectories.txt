@@ -1,0 +1,2 @@
+/home/yanlei/note/c++/test/build/CMakeFiles/rebuild_cache.dir
+/home/yanlei/note/c++/test/build/CMakeFiles/edit_cache.dir
