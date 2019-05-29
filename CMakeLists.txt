@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.0.0)#cmake最小版本
 project(hello VERSION 0.1.0)#工程名字
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall") #开启调试
 set (CMAKE_CXX_STANDARD 11)#C++11标准
+#CMAKE语言，指令是大小写无关的，参数和变量是大小写相关的
 
 #set(CMAKE_INSTALL_PREFIX /home/yanlei/temp/cmake)#设定安装的文件夹 也可以用 cmake -D CMAKE_INSTALL_PREFIX=/home/yanlei/temp/cmake ..
 
@@ -33,7 +34,7 @@ install(FILES lib/inc/hello.hpp
         DESTINATION include/hello)
 
 ################################################################
-#                          编译库文件
+#                         endof  编译库文件
 ################################################################
 
 set(PROJECT_SRCS
