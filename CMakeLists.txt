@@ -23,17 +23,21 @@ include_directories(
 message("This is DIR_SRCS: " ${DIR_SRCS})
 message("This is PROJECT_SOURCE_DIR: " ${PROJECT_SOURCE_DIR})#工程代码所在目录
 message("This is PROJECT_BINARY_DIR: " ${PROJECT_BINARY_DIR})#PROJECT_BINARY_DIR就是编译发生的当前目录
-
 message("This is hello_SOURCE_DIR: " ${hello_SOURCE_DIR})
 message("This is CMAKE_CXX_FLAGS: " ${CMAKE_CXX_FLAGS})
 message("This is EXECUTABLE_OUTPUT_PATH: " ${EXECUTABLE_OUTPUT_PATH})
-add_subdirectory(src bin)
+message("This is CMAKE_INSTALL_PREFIX: " ${CMAKE_INSTALL_PREFIX})
+
+
+
+add_subdirectory(src bin)#增加子目录
+add_subdirectory(lib)
 
 #link可执行文件
 #add_executable(hello ${DIR_SRCS})
 
 
-install(FILES COPYRIGHT README.MD DESTINATION share/doc/cmake/t2)
-install(PROGRAMS runhello.sh DESTINATION bin)
-install(DIRECTORY doc/ DESTINATION share/doc/cmake/t2)
+install(FILES COPYRIGHT README.MD DESTINATION share/doc/cmake/t2) #安装文件到DESTINATION，share/doc/cmake/t2是相对CMAKE_INSTALL_PREFIX的路径
+install(PROGRAMS runhello.sh build/bin/hello DESTINATION bin)     #安装程序到DESTINATION
+install(DIRECTORY doc/ DESTINATION share/doc/cmake/t2)            #安装doc目录下的文件到DESTINATION
 
