@@ -1,16 +1,8 @@
-cmake_minimum_required(VERSION 3.10)
 
-set(DIR_SRCS
-main.cpp
-)
 
-#include_directories(/usr/include/hello)
 
-find_path(myheader hello.hpp)                   
-if(myheader)
-message( "This is myheader: " ${myheader})
-include_directories(${myheader})    
-endif(myheader)
+
+
 #前面我们直接使用了绝对路径 INCLUDE_DIRECTORIES(/usr/include/hello)告诉工程这个头文件目录。
 #为了将程序更智能一点，我们可以使用 CMAKE_INCLUDE_PATH 来进行
 
