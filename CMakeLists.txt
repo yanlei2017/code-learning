@@ -66,7 +66,7 @@ link_directories(
 # link_directories(${mylib})
 # endif(mylib)
 
-find_library(mylib hello /home/yanlei/note/c++/lib/libso)
+find_library(mylib NAMES hello PATH /home/yanlei/note/c++/lib/libso)
 #控制台打印消息
 message("This is project name : " ${PROJECT_NAME})
 message("This is PROJECT_SOURCE_DIR: " ${PROJECT_SOURCE_DIR})#工程代码所在目录
