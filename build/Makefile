@@ -157,6 +157,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named hello_static
+
+# Build rule for target.
+hello_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hello_static
+.PHONY : hello_static
+
+# fast build rule for target.
+hello_static/fast:
+	$(MAKE) -f lib/CMakeFiles/hello_static.dir/build.make lib/CMakeFiles/hello_static.dir/build
+.PHONY : hello_static/fast
+
+#=============================================================================
 # Target rules for targets named hello
 
 # Build rule for target.
@@ -166,7 +179,7 @@ hello: cmake_check_build_system
 
 # fast build rule for target.
 hello/fast:
-	$(MAKE) -f bin/CMakeFiles/hello.dir/build.make bin/CMakeFiles/hello.dir/build
+	$(MAKE) -f lib/CMakeFiles/hello.dir/build.make lib/CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
 # Help Target
@@ -181,6 +194,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... hello_static"
 	@echo "... hello"
 .PHONY : help
 

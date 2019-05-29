@@ -68,6 +68,40 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -89,40 +123,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -156,75 +156,6 @@ depend:
 	cd /home/yanlei/note/c++/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-bin/CMakeFiles/hello.dir/rule:
-	cd /home/yanlei/note/c++/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/hello.dir/rule
-.PHONY : bin/CMakeFiles/hello.dir/rule
-
-# Convenience name for target.
-hello: bin/CMakeFiles/hello.dir/rule
-
-.PHONY : hello
-
-# fast build rule for target.
-hello/fast:
-	cd /home/yanlei/note/c++/build && $(MAKE) -f bin/CMakeFiles/hello.dir/build.make bin/CMakeFiles/hello.dir/build
-.PHONY : hello/fast
-
-c++/hello.o: c++/hello.cpp.o
-
-.PHONY : c++/hello.o
-
-# target to build an object file
-c++/hello.cpp.o:
-	cd /home/yanlei/note/c++/build && $(MAKE) -f bin/CMakeFiles/hello.dir/build.make bin/CMakeFiles/hello.dir/c++/hello.cpp.o
-.PHONY : c++/hello.cpp.o
-
-c++/hello.i: c++/hello.cpp.i
-
-.PHONY : c++/hello.i
-
-# target to preprocess a source file
-c++/hello.cpp.i:
-	cd /home/yanlei/note/c++/build && $(MAKE) -f bin/CMakeFiles/hello.dir/build.make bin/CMakeFiles/hello.dir/c++/hello.cpp.i
-.PHONY : c++/hello.cpp.i
-
-c++/hello.s: c++/hello.cpp.s
-
-.PHONY : c++/hello.s
-
-# target to generate assembly for a file
-c++/hello.cpp.s:
-	cd /home/yanlei/note/c++/build && $(MAKE) -f bin/CMakeFiles/hello.dir/build.make bin/CMakeFiles/hello.dir/c++/hello.cpp.s
-.PHONY : c++/hello.cpp.s
-
-c++/main.o: c++/main.cpp.o
-
-.PHONY : c++/main.o
-
-# target to build an object file
-c++/main.cpp.o:
-	cd /home/yanlei/note/c++/build && $(MAKE) -f bin/CMakeFiles/hello.dir/build.make bin/CMakeFiles/hello.dir/c++/main.cpp.o
-.PHONY : c++/main.cpp.o
-
-c++/main.i: c++/main.cpp.i
-
-.PHONY : c++/main.i
-
-# target to preprocess a source file
-c++/main.cpp.i:
-	cd /home/yanlei/note/c++/build && $(MAKE) -f bin/CMakeFiles/hello.dir/build.make bin/CMakeFiles/hello.dir/c++/main.cpp.i
-.PHONY : c++/main.cpp.i
-
-c++/main.s: c++/main.cpp.s
-
-.PHONY : c++/main.s
-
-# target to generate assembly for a file
-c++/main.cpp.s:
-	cd /home/yanlei/note/c++/build && $(MAKE) -f bin/CMakeFiles/hello.dir/build.make bin/CMakeFiles/hello.dir/c++/main.cpp.s
-.PHONY : c++/main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -232,18 +163,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... edit_cache"
-	@echo "... hello"
-	@echo "... rebuild_cache"
-	@echo "... list_install_components"
-	@echo "... install/local"
 	@echo "... install"
-	@echo "... c++/hello.o"
-	@echo "... c++/hello.i"
-	@echo "... c++/hello.s"
-	@echo "... c++/main.o"
-	@echo "... c++/main.i"
-	@echo "... c++/main.s"
+	@echo "... install/local"
+	@echo "... list_install_components"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 .PHONY : help
 
 
