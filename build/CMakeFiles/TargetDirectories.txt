@@ -1,0 +1,9 @@
+/home/yanlei/note/c++/build/CMakeFiles/install/strip.dir
+/home/yanlei/note/c++/build/CMakeFiles/install/local.dir
+/home/yanlei/note/c++/build/CMakeFiles/install.dir
+/home/yanlei/note/c++/build/CMakeFiles/hello_static.dir
+/home/yanlei/note/c++/build/CMakeFiles/hello.dir
+/home/yanlei/note/c++/build/CMakeFiles/edit_cache.dir
+/home/yanlei/note/c++/build/CMakeFiles/helloworld.dir
+/home/yanlei/note/c++/build/CMakeFiles/rebuild_cache.dir
+/home/yanlei/note/c++/build/CMakeFiles/list_install_components.dir

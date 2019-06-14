@@ -1,0 +1,1 @@
+/usr/bin/c++   -g -Wall  -rdynamic CMakeFiles/helloworld.dir/main.cpp.o  -o bin/helloworld  -L/home/yanlei/note/c++/lib/libso -Wl,-rpath,/home/yanlei/note/c++/lib/libso: ../lib/libso/libhello.so.1.2 
