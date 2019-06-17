@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/primerplus.dir/main.cpp.o CMakeFiles/primerplus.dir/test.cpp.o CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o  -o primerplus -Wl,-rpath,/usr/local/lib /usr/local/lib/libprotobuf.so -lpthread 

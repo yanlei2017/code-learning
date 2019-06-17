@@ -12,6 +12,7 @@
         Miya *yanlei=new Miya("yanlei",23,180,80);
        //  Miya *yanlei=new Miya;
         yanlei->show();
+        show_public();
 
         //Miya Wust ; 
         //Wust.show();    

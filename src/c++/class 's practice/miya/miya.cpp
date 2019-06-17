@@ -17,11 +17,26 @@
         weight=weight_;
     }
  
-    void Miya::show() const
+    void Miya::show_public() const
     {   
         using namespace std;
-        cout<<name<<"'s name ："<<name<<endl;
+        cout << "this "<<(void*)this <<endl;
+        cout << "age "<<(void*)&age << endl;
+
+        cout << "height "<<(void*)&height << endl;
+
+        cout << "weight "<<(void*)&weight << endl;
+        cout << "name "<<(void*)&name << endl;
+
+        
+        cout << this->name << "'s name ：" << name << endl;
         cout<<name<<"'s age ： "<<age<<" years old "<<endl;
         cout<<name<<"'s weight ："<<weight<<" kg "<<endl;
         cout<<name<<"'s height ："<<height<<" cm "<<endl;
     }
+
+    void Miya::show_default() { std::cout << "this is function show_default"; }
+    void Miya::show_private() { std::cout << "this is function show_privatre"; }
+
+    void Miya::show_public() { std::cout << "this is function show_public"; }
+    
