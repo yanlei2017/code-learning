@@ -1,0 +1,22 @@
+project(tutorial)
+cmake_minimum_required(VERSION 2.8)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR})
+
+find_package(Protobuf REQUIRED)
+if(PROTOBUF_FOUND)
+message(STATUS "protobuf library found")
+else()    
+message(FATAL_ERROR "protobuf library is needed but cant be found")
+endif(PROTOBUF_FOUND)
+
+include_directories(${PROTOBUF_INCLUDE_DIRS})
+include_directories(${PROJECT_SOURCE_DIR}/protobuf_gen)
+aux_source_directory(${PROJECT_SOURCE_DIR}/protobuf_gen SRC_LIST_PROTOBUF)
+message("SRC_LIST_PROTOBUF: " ${SRC_LIST_PROTOBUF})
+aux_source_directory(${PROJECT_SOURCE_DIR} SRC_LIST)
+message("SRC_LIST: " ${SRC_LIST})
+
+add_executable(readmessage readmessage.cpp ${SRC_LIST_PROTOBUF})
+add_executable(writemessage writemessage.cpp ${SRC_LIST_PROTOBUF})
+target_link_libraries(readmessage ${PROTOBUF_LIBRARIES})
+target_link_libraries(writemessage ${PROTOBUF_LIBRARIES})
