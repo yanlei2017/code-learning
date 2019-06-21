@@ -70,12 +70,13 @@ enum GoodsCategory : int {
   SAND = 0,
   STONE = 1,
   CEMENT = 2,
+  MAX_CATEGORY_NUMBER = 3,
   GoodsCategory_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   GoodsCategory_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool GoodsCategory_IsValid(int value);
 constexpr GoodsCategory GoodsCategory_MIN = SAND;
-constexpr GoodsCategory GoodsCategory_MAX = CEMENT;
+constexpr GoodsCategory GoodsCategory_MAX = MAX_CATEGORY_NUMBER;
 constexpr int GoodsCategory_ARRAYSIZE = GoodsCategory_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* GoodsCategory_descriptor();
@@ -255,6 +256,18 @@ class customer :
   std::string* release_address();
   void set_allocated_address(std::string* address);
 
+  // string category_name = 9;
+  void clear_category_name();
+  static const int kCategoryNameFieldNumber = 9;
+  const std::string& category_name() const;
+  void set_category_name(const std::string& value);
+  void set_category_name(std::string&& value);
+  void set_category_name(const char* value);
+  void set_category_name(const char* value, size_t size);
+  std::string* mutable_category_name();
+  std::string* release_category_name();
+  void set_allocated_category_name(std::string* category_name);
+
   // uint64 phone_number = 3;
   void clear_phone_number();
   static const int kPhoneNumberFieldNumber = 3;
@@ -298,6 +311,7 @@ class customer :
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr address_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr category_name_;
   ::PROTOBUF_NAMESPACE_ID::uint64 phone_number_;
   ::PROTOBUF_NAMESPACE_ID::uint32 id_;
   int category_;
@@ -648,6 +662,57 @@ inline void customer::set_total_payment(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
   total_payment_ = value;
   // @@protoc_insertion_point(field_set:customer.total_payment)
+}
+
+// string category_name = 9;
+inline void customer::clear_category_name() {
+  category_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& customer::category_name() const {
+  // @@protoc_insertion_point(field_get:customer.category_name)
+  return category_name_.GetNoArena();
+}
+inline void customer::set_category_name(const std::string& value) {
+  
+  category_name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:customer.category_name)
+}
+inline void customer::set_category_name(std::string&& value) {
+  
+  category_name_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:customer.category_name)
+}
+inline void customer::set_category_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  category_name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:customer.category_name)
+}
+inline void customer::set_category_name(const char* value, size_t size) {
+  
+  category_name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:customer.category_name)
+}
+inline std::string* customer::mutable_category_name() {
+  
+  // @@protoc_insertion_point(field_mutable:customer.category_name)
+  return category_name_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* customer::release_category_name() {
+  // @@protoc_insertion_point(field_release:customer.category_name)
+  
+  return category_name_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void customer::set_allocated_category_name(std::string* category_name) {
+  if (category_name != nullptr) {
+    
+  } else {
+    
+  }
+  category_name_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), category_name);
+  // @@protoc_insertion_point(field_set_allocated:customer.category_name)
 }
 
 // -------------------------------------------------------------------

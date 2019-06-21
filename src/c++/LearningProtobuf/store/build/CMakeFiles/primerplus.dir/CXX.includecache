@@ -46,15 +46,15 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/yanlei/primerplus/main.cpp
+/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/main.cpp
 iostream
 -
 store.pb.h
 -
 
-/home/yanlei/primerplus/protobuf/protobuf_generated/store.pb.cc
+/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/protobuf/protobuf_generated/store.pb.cc
 store.pb.h
-/home/yanlei/primerplus/protobuf/protobuf_generated/store.pb.h
+/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/protobuf/protobuf_generated/store.pb.h
 algorithm
 -
 google/protobuf/stubs/common.h
@@ -78,7 +78,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/yanlei/primerplus/protobuf/protobuf_generated/store.pb.h
+/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/protobuf/protobuf_generated/store.pb.h
 limits
 -
 string
@@ -118,7 +118,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/yanlei/primerplus/test.cpp
+/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/test.cpp
 
 /usr/local/include/google/protobuf/arena.h
 limits

@@ -69,6 +69,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_store_2eproto::offsets[] PROTO
   PROTOBUF_FIELD_OFFSET(::customer, amount_),
   PROTOBUF_FIELD_OFFSET(::customer, price_),
   PROTOBUF_FIELD_OFFSET(::customer, total_payment_),
+  PROTOBUF_FIELD_OFFSET(::customer, category_name_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::goods, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -80,7 +81,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_store_2eproto::offsets[] PROTO
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::customer)},
-  { 13, -1, sizeof(::goods)},
+  { 14, -1, sizeof(::goods)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -89,16 +90,18 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_store_2eproto[] =
-  "\n\013store.proto\"\243\001\n\010customer\022\014\n\004name\030\001 \001(\t"
+  "\n\013store.proto\"\272\001\n\010customer\022\014\n\004name\030\001 \001(\t"
   "\022\n\n\002id\030\002 \001(\r\022\024\n\014phone_number\030\003 \001(\004\022\017\n\007ad"
   "dress\030\004 \001(\t\022 \n\010category\030\005 \001(\0162\016.GoodsCat"
   "egory\022\016\n\006amount\030\006 \001(\r\022\r\n\005price\030\007 \001(\r\022\025\n\r"
-  "total_payment\030\010 \001(\r\"0\n\005goods\022\n\n\002id\030\001 \001(\r"
-  "\022\014\n\004name\030\002 \001(\t\022\r\n\005price\030\003 \001(\r*0\n\rGoodsCa"
-  "tegory\022\010\n\004SAND\020\000\022\t\n\005STONE\020\001\022\n\n\006CEMENT\020\002*"
-  "i\n\007Options\022\026\n\022CHANGE_GOODS_PRICE\020\000\022\023\n\017SH"
-  "OW_BUYER_INFO\020\001\022\r\n\tNEW_ORDER\020\002\022\020\n\014ADD_CA"
-  "TEGORY\020\003\022\020\n\014EXIT_PROGRAM\020\004b\006proto3"
+  "total_payment\030\010 \001(\r\022\025\n\rcategory_name\030\t \001"
+  "(\t\"0\n\005goods\022\n\n\002id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\r\n"
+  "\005price\030\003 \001(\r*I\n\rGoodsCategory\022\010\n\004SAND\020\000\022"
+  "\t\n\005STONE\020\001\022\n\n\006CEMENT\020\002\022\027\n\023MAX_CATEGORY_N"
+  "UMBER\020\003*i\n\007Options\022\026\n\022CHANGE_GOODS_PRICE"
+  "\020\000\022\023\n\017SHOW_BUYER_INFO\020\001\022\r\n\tNEW_ORDER\020\002\022\020"
+  "\n\014ADD_CATEGORY\020\003\022\020\n\014EXIT_PROGRAM\020\004b\006prot"
+  "o3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_store_2eproto_deps[1] = {
 };
@@ -109,7 +112,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_sto
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_store_2eproto_once;
 static bool descriptor_table_store_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_store_2eproto = {
-  &descriptor_table_store_2eproto_initialized, descriptor_table_protodef_store_2eproto, "store.proto", 394,
+  &descriptor_table_store_2eproto_initialized, descriptor_table_protodef_store_2eproto, "store.proto", 442,
   &descriptor_table_store_2eproto_once, descriptor_table_store_2eproto_sccs, descriptor_table_store_2eproto_deps, 2, 0,
   schemas, file_default_instances, TableStruct_store_2eproto::offsets,
   file_level_metadata_store_2eproto, 2, file_level_enum_descriptors_store_2eproto, file_level_service_descriptors_store_2eproto,
@@ -126,6 +129,7 @@ bool GoodsCategory_IsValid(int value) {
     case 0:
     case 1:
     case 2:
+    case 3:
       return true;
     default:
       return false;
@@ -167,6 +171,7 @@ const int customer::kCategoryFieldNumber;
 const int customer::kAmountFieldNumber;
 const int customer::kPriceFieldNumber;
 const int customer::kTotalPaymentFieldNumber;
+const int customer::kCategoryNameFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 customer::customer()
@@ -186,6 +191,10 @@ customer::customer(const customer& from)
   if (from.address().size() > 0) {
     address_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.address_);
   }
+  category_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (from.category_name().size() > 0) {
+    category_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.category_name_);
+  }
   ::memcpy(&phone_number_, &from.phone_number_,
     static_cast<size_t>(reinterpret_cast<char*>(&total_payment_) -
     reinterpret_cast<char*>(&phone_number_)) + sizeof(total_payment_));
@@ -196,6 +205,7 @@ void customer::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_customer_store_2eproto.base);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  category_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&phone_number_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&total_payment_) -
       reinterpret_cast<char*>(&phone_number_)) + sizeof(total_payment_));
@@ -209,6 +219,7 @@ customer::~customer() {
 void customer::SharedDtor() {
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   address_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  category_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void customer::SetCachedSize(int size) const {
@@ -228,6 +239,7 @@ void customer::Clear() {
 
   name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   address_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  category_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&phone_number_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&total_payment_) -
       reinterpret_cast<char*>(&phone_number_)) + sizeof(total_payment_));
@@ -296,6 +308,13 @@ const char* customer::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 64)) {
           total_payment_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string category_name = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_category_name(), ptr, ctx, "customer.category_name");
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -438,6 +457,21 @@ bool customer::MergePartialFromCodedStream(
         break;
       }
 
+      // string category_name = 9;
+      case 9: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_category_name()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->category_name().data(), static_cast<int>(this->category_name().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "customer.category_name"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -516,6 +550,16 @@ void customer::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(8, this->total_payment(), output);
   }
 
+  // string category_name = 9;
+  if (this->category_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->category_name().data(), static_cast<int>(this->category_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "customer.category_name");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      9, this->category_name(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -582,6 +626,17 @@ void customer::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(8, this->total_payment(), target);
   }
 
+  // string category_name = 9;
+  if (this->category_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->category_name().data(), static_cast<int>(this->category_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "customer.category_name");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        9, this->category_name(), target);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
@@ -615,6 +670,13 @@ size_t customer::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->address());
+  }
+
+  // string category_name = 9;
+  if (this->category_name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->category_name());
   }
 
   // uint64 phone_number = 3;
@@ -693,6 +755,10 @@ void customer::MergeFrom(const customer& from) {
 
     address_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.address_);
   }
+  if (from.category_name().size() > 0) {
+
+    category_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.category_name_);
+  }
   if (from.phone_number() != 0) {
     set_phone_number(from.phone_number());
   }
@@ -741,6 +807,8 @@ void customer::InternalSwap(customer* other) {
   name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   address_.Swap(&other->address_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  category_name_.Swap(&other->category_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(phone_number_, other->phone_number_);
   swap(id_, other->id_);

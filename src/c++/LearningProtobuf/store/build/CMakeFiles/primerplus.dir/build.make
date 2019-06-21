@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yanlei/primerplus
+CMAKE_SOURCE_DIR = /home/yanlei/coding-learning/src/c++/LearningProtobuf/store
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yanlei/primerplus/build
+CMAKE_BINARY_DIR = /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/primerplus.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/primerplus.dir/flags.make
 
 CMakeFiles/primerplus.dir/main.cpp.o: CMakeFiles/primerplus.dir/flags.make
 CMakeFiles/primerplus.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yanlei/primerplus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/primerplus.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/primerplus.dir/main.cpp.o -c /home/yanlei/primerplus/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/primerplus.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/primerplus.dir/main.cpp.o -c /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/main.cpp
 
 CMakeFiles/primerplus.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/primerplus.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanlei/primerplus/main.cpp > CMakeFiles/primerplus.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/main.cpp > CMakeFiles/primerplus.dir/main.cpp.i
 
 CMakeFiles/primerplus.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/primerplus.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanlei/primerplus/main.cpp -o CMakeFiles/primerplus.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/main.cpp -o CMakeFiles/primerplus.dir/main.cpp.s
 
 CMakeFiles/primerplus.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/primerplus.dir/main.cpp.o.provides.build: CMakeFiles/primerplus.dir/m
 
 CMakeFiles/primerplus.dir/test.cpp.o: CMakeFiles/primerplus.dir/flags.make
 CMakeFiles/primerplus.dir/test.cpp.o: ../test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yanlei/primerplus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/primerplus.dir/test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/primerplus.dir/test.cpp.o -c /home/yanlei/primerplus/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/primerplus.dir/test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/primerplus.dir/test.cpp.o -c /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/test.cpp
 
 CMakeFiles/primerplus.dir/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/primerplus.dir/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanlei/primerplus/test.cpp > CMakeFiles/primerplus.dir/test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/test.cpp > CMakeFiles/primerplus.dir/test.cpp.i
 
 CMakeFiles/primerplus.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/primerplus.dir/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanlei/primerplus/test.cpp -o CMakeFiles/primerplus.dir/test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/test.cpp -o CMakeFiles/primerplus.dir/test.cpp.s
 
 CMakeFiles/primerplus.dir/test.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/primerplus.dir/test.cpp.o.provides.build: CMakeFiles/primerplus.dir/t
 
 CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o: CMakeFiles/primerplus.dir/flags.make
 CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o: ../protobuf/protobuf_generated/store.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yanlei/primerplus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o -c /home/yanlei/primerplus/protobuf/protobuf_generated/store.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o -c /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/protobuf/protobuf_generated/store.pb.cc
 
 CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanlei/primerplus/protobuf/protobuf_generated/store.pb.cc > CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/protobuf/protobuf_generated/store.pb.cc > CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.i
 
 CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanlei/primerplus/protobuf/protobuf_generated/store.pb.cc -o CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/protobuf/protobuf_generated/store.pb.cc -o CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.s
 
 CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o.requires:
 
@@ -144,7 +144,7 @@ primerplus: CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o
 primerplus: CMakeFiles/primerplus.dir/build.make
 primerplus: /usr/local/lib/libprotobuf.so
 primerplus: CMakeFiles/primerplus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yanlei/primerplus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable primerplus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable primerplus"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/primerplus.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -163,6 +163,6 @@ CMakeFiles/primerplus.dir/clean:
 .PHONY : CMakeFiles/primerplus.dir/clean
 
 CMakeFiles/primerplus.dir/depend:
-	cd /home/yanlei/primerplus/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yanlei/primerplus /home/yanlei/primerplus /home/yanlei/primerplus/build /home/yanlei/primerplus/build /home/yanlei/primerplus/build/CMakeFiles/primerplus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yanlei/coding-learning/src/c++/LearningProtobuf/store /home/yanlei/coding-learning/src/c++/LearningProtobuf/store /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build/CMakeFiles/primerplus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/primerplus.dir/depend
 

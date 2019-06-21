@@ -10,13 +10,15 @@ int main(int argc, char const *argv[]) {
 
   yanlei_r = 1;
   cout << "after  yanlei_r=1" << endl;
-  cout << yanlei << endl;
-  cout << yanlei_r << endl;
+  cout << "yanlei = "<<yanlei << endl;
+  cout << "yanlei_r = "<<yanlei_r << endl;
 
-  yanlei = 1;
-  cout << "after  yanlei=1" << endl;
-  cout << yanlei << endl;
-  cout << yanlei_r << endl;
+  yanlei = 2;
+  cout << "after  yanlei=2" << endl;
+  cout << "yanlei = "<<yanlei << endl;
+  cout << "yanlei_r = "<<yanlei_r << endl;
+
+
   int *yanlei_p =&yanlei;
   cout <<"yanlei_p addr = " <<(void *)yanlei_p << endl;
 

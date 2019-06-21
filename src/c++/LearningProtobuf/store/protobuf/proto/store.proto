@@ -4,6 +4,7 @@ enum GoodsCategory {
   SAND = 0;
   STONE = 1;
   CEMENT = 2;
+  MAX_CATEGORY_NUMBER=3;
 }
 enum Options {
   CHANGE_GOODS_PRICE = 0;
@@ -21,6 +22,7 @@ message customer {
   uint32 amount = 6;
   uint32 price = 7;
   uint32 total_payment = 8;
+  string category_name=9;
 }
 
 message goods {

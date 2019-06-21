@@ -3,7 +3,7 @@
 
 CMakeFiles/primerplus.dir/main.cpp.o
  ../protobuf/protobuf_generated/store.pb.h
- /home/yanlei/primerplus/main.cpp
+ /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/main.cpp
  /usr/local/include/google/protobuf/arena.h
  /usr/local/include/google/protobuf/arena_impl.h
  /usr/local/include/google/protobuf/arenastring.h
@@ -47,8 +47,8 @@ CMakeFiles/primerplus.dir/main.cpp.o
  /usr/local/include/google/protobuf/unknown_field_set.h
  /usr/local/include/google/protobuf/wire_format_lite.h
 CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o
- /home/yanlei/primerplus/protobuf/protobuf_generated/store.pb.cc
- /home/yanlei/primerplus/protobuf/protobuf_generated/store.pb.h
+ /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/protobuf/protobuf_generated/store.pb.cc
+ /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/protobuf/protobuf_generated/store.pb.h
  /usr/local/include/google/protobuf/arena.h
  /usr/local/include/google/protobuf/arena_impl.h
  /usr/local/include/google/protobuf/arenastring.h
@@ -94,4 +94,4 @@ CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o
  /usr/local/include/google/protobuf/wire_format.h
  /usr/local/include/google/protobuf/wire_format_lite.h
 CMakeFiles/primerplus.dir/test.cpp.o
- /home/yanlei/primerplus/test.cpp
+ /home/yanlei/coding-learning/src/c++/LearningProtobuf/store/test.cpp

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yanlei/primerplus/main.cpp" "/home/yanlei/primerplus/build/CMakeFiles/primerplus.dir/main.cpp.o"
-  "/home/yanlei/primerplus/protobuf/protobuf_generated/store.pb.cc" "/home/yanlei/primerplus/build/CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o"
-  "/home/yanlei/primerplus/test.cpp" "/home/yanlei/primerplus/build/CMakeFiles/primerplus.dir/test.cpp.o"
+  "/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/main.cpp" "/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build/CMakeFiles/primerplus.dir/main.cpp.o"
+  "/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/protobuf/protobuf_generated/store.pb.cc" "/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build/CMakeFiles/primerplus.dir/protobuf/protobuf_generated/store.pb.cc.o"
+  "/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/test.cpp" "/home/yanlei/coding-learning/src/c++/LearningProtobuf/store/build/CMakeFiles/primerplus.dir/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
