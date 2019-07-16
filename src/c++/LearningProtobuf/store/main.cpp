@@ -2,7 +2,6 @@
 #include <iostream>
 using namespace std;
 #include <store.pb.h>
-#define MAX_CATEGORY_AMOUNT 100
 typedef unsigned int uint32;
 uint32 total_customer_amount;
 // protobuf存数据
