@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+enum GoodsCategory {
+  SAND = 0;
+  STONE = 1;
+  CEMENT = 2;
+  MAX_CATEGORY_NUMBER=3;
+}
+enum Options {
+  CHANGE_GOODS_PRICE = 0;
+  SHOW_BUYER_INFO = 1;
+  NEW_ORDER = 2;
+  ADD_CATEGORY = 3;
+  EXIT_PROGRAM=4;
+}
+message customer {
+  string name = 1;
+  uint32 id = 2;
+  uint64 phone_number = 3;
+  string address = 4;
+  GoodsCategory category = 5;
+  uint32 amount = 6;
+  uint32 price = 7;
+  uint32 total_payment = 8;
+  string category_name=9;
+}
+
+message goods {
+  uint32 id = 1;
+  string name = 2;
+  uint32 price = 3;
+}

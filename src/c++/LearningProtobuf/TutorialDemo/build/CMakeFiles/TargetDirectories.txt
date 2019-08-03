@@ -1,0 +1,4 @@
+/home/yanlei/note/c++/src/c++/LearningProtobuf/TutorialDemo/build/CMakeFiles/rebuild_cache.dir
+/home/yanlei/note/c++/src/c++/LearningProtobuf/TutorialDemo/build/CMakeFiles/edit_cache.dir
+/home/yanlei/note/c++/src/c++/LearningProtobuf/TutorialDemo/build/CMakeFiles/readmessage.dir
+/home/yanlei/note/c++/src/c++/LearningProtobuf/TutorialDemo/build/CMakeFiles/writemessage.dir

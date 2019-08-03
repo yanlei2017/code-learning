@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/readmessage.dir/readmessage.cpp.o CMakeFiles/readmessage.dir/protobuf_gen/person.pb.cc.o  -o ../readmessage -Wl,-rpath,/usr/local/lib /usr/local/lib/libprotobuf.so -lpthread 
