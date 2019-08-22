@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/main.dir/main.cpp.o  -o main  -L/home/yanlei/note/c++/lib/libso/libhello.so -Wl,-rpath,/home/yanlei/note/c++/lib/libso/libhello.so:/home/yanlei/note/c++/lib/libso /home/yanlei/note/c++/lib/libso/libhello.so 
