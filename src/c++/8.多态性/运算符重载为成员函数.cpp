@@ -7,8 +7,8 @@ private:
 
 public:
   Clock(int hour, int minute, int second);
-  Clock &operator++();
-  Clock operator++(int);//此处的形参不能使用，仅作为后置++的标识符
+  Clock &operator++();//前置++
+  Clock operator++(int);//后置++,此处的形参不能使用，仅作为后置++的标识符
   void showtime();
 
   ~Clock();
