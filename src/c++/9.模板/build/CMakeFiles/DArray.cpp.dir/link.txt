@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/DArray.cpp.dir/useDArray.cpp.o  -o DArray.cpp -rdynamic 

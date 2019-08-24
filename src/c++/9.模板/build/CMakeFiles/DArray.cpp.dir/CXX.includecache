@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yanlei/code-learning/src/c++/9.模板/DArray.hpp
+cassert
+-
+iostream
+-
+
+/home/yanlei/code-learning/src/c++/9.模板/useDArray.cpp
+DArray.hpp
+/home/yanlei/code-learning/src/c++/9.模板/DArray.hpp
+
