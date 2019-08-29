@@ -1,8 +1,6 @@
-#ifndef DARRAY_H
-#define DARRAY_H
+#pragma once
 
 #include <cassert>
-
 
 template <class T>
 class DArray {
@@ -19,12 +17,12 @@ class DArray {
   const T &operator[](int i) const;
   operator T *();
   operator const T *() const;
-  int getsize()const;
+  int getsize() const;
   void resize(int sz);
 };
 template <class T>
 DArray<T>::DArray(int sz) {
-  assert(sz > 0);
+  assert(sz >= 0);
   size = sz;
   list = new T[size];
 }
@@ -60,13 +58,13 @@ DArray<T> &DArray<T>::operator=(const DArray<T> &d) {
 
 template <class T>
 T &DArray<T>::operator[](int i) {
-  assert(i > 0 && i < size);
+  assert(i >= 0 && i < size);
   return list[i];
 }
 
 template <class T>
 const T &DArray<T>::operator[](int i) const {
-  assert(i > 0 && i < size);
+  assert(i >= 0 && i < size);
   return list[i];
 }
 template <class T>
@@ -74,13 +72,13 @@ DArray<T>::operator T *() {
   return list;
 }
 template <class T>
-int DArray<T>::getsize()const  {
+int DArray<T>::getsize() const {
   return size;
 }
 
 template <class T>
 void DArray<T>::resize(int sz) {
-  assert(sz > 0);
+  assert(sz >= 0);
   if (sz == size) {
     return;
   }
@@ -94,5 +92,3 @@ void DArray<T>::resize(int sz) {
   list = newlist;
   size = sz;
 }
-
-#endif
