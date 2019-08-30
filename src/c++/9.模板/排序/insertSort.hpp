@@ -5,11 +5,13 @@ using namespace std;
 template <class T>
 void insertSort(T *arr, int n)
 {
+    std::cout<<"\n插入排序"<<endl;
+
     assert(arr != nullptr && n > 0);
     int i,j;
-        for (int i = 1; i < n; i++)//从数组的第二个元素开始
+        for ( i = 1; i < n; i++)//从数组的第二个元素开始
     {
-        int j = i;
+         j = i;
         T temp = arr[i];//存储当前待比较元素
         while (j > 0 && temp < arr[j - 1])//如果当前待比较的元素比前一个数小
         {
