@@ -34,7 +34,7 @@ void quickSort(vector<T> &a, int low, int high)
 template <class T>
 void Qsort(vector<T> &arr)
 {
-    quickSort(arr, 0, arr.size()-1);
+    quickSort(arr, 0, arr.size() - 1);
 }
 int main(int argc, char const *argv[])
 {
