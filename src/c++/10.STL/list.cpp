@@ -26,26 +26,26 @@ int main(int argc, char const *argv[])
     s2 = e f g h a
     */
     list<string>::iterator iter1 = s1.begin();
-    advance(iter1, 2); //*iter="d" iter1前进2个元素
+    advance(iter1, 2); //*iter1="d" iter1前进2个元素
     list<string>::iterator iter2 = s2.begin();
     ++iter2; // *iter2="f" iter2前进1个元素
     list<string>::iterator iter3 = iter2;
-    advance(iter3, 2);                  // *iter3="g" iter3前进2个元素
+    advance(iter3, 2);                  // *iter3="h" iter3前进2个元素
     s1.splice(iter1, s2, iter2, iter3); //将[iter2, iter3)范围内的结点接到s1中iter1指向的结点 前
     /*
     s1=b c f g d
     s2=e h a
     */
     copy(s1.begin(), s1.end(), ostream_iterator<string>(cout, " "));
+    cout << endl;
+
     copy(s2.begin(), s2.end(), ostream_iterator<string>(cout, " "));
 
-    cout << endl;
     cout << endl;
     back_insert_iterator<list<string>> b_iterator(s2);
     front_insert_iterator<list<string>> f_iterator(s2);
     b_iterator = "yanlei";
     f_iterator = "yfl";
-    back_inserter(s2);
     copy(s2.begin(), s2.end(), ostream_iterator<string>(cout, " "));
     cout << endl;
     /*

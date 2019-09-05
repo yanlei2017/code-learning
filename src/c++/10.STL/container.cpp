@@ -51,25 +51,27 @@ void printContainer(const char* msg,const T& s){
 int main(int argc, char const *argv[])
 {
     deque<int> s;
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i <10; i++)
     {
         int x;
         cin>>x;
         s.push_front(x);
     }
-    printContainer("deque at first",s);
-    list<int> l(s.rbegin(),s.rend());
-    printContainer("list at first",l);
+    printContainer("deque s at first",s);
+    list<int> l(s.rbegin(),s.rend());//用s容器的内容的逆序构造列表容器l
+    printContainer("用s容器的内容的逆序构造列表容器l,l at first = ",l);
+
     list<int>::iterator iter=l.begin();
-    while (iter!=l.end())
+    while (iter!=l.end())//将列表容器l的每相邻两个元素顺序颠倒
     {
-        int v=*iter;
-        iter=l.erase(iter);//erase返回被删除元素的下一个指针
-        l.insert(++iter,v);
+        /*example A B C D*/
+        int v=*iter;//保存当前数 A
+        iter=l.erase(iter);//erase删除迭代器位置处的单个字符(A), 并返回下个元素的迭代器(B)
+        l.insert(++iter,v);//C之前插入A   B A C D  iter=C
     }
-    printContainer("list at last",l);
+    printContainer(" 将列表容器l的每相邻两个元素顺序颠倒 list at last = ",l);
     s.assign(l.begin(),l.end());
-    printContainer("deque at last",s);
+    printContainer("用列表容器l的内容给s赋值,将s输出 deque at last",s);
     
     return 0;
 }
