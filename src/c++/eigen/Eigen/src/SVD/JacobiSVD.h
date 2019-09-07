@@ -236,7 +236,7 @@ public:
         svd.m_matrixV.setIdentity(matrix.cols(), matrix.rows());
         m_qr.householderQ().applyThisOnTheLeft(svd.m_matrixV, m_workspace);
       }
-      if(svd.computeU()) svd.m_matrixU = m_qr.colsPermutation();
+      if(svd.computeU()) svd.m_matrixU = m_qr.colsutation();
       return true;
     }
     else return false;
