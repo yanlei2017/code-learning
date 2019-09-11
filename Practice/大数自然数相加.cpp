@@ -3,6 +3,7 @@
 #include<bits/stdc++.h>
 #include<string.h>
 using namespace std;
+
  char *strrev(char *str)
 {
       char *p1, *p2;
@@ -11,7 +12,7 @@ using namespace std;
             return str;
       for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
       {
-            *p1 ^= *p2;
+            *p1 ^= *p2;/*亦或？*/
             *p2 ^= *p1;
             *p1 ^= *p2;
       }
