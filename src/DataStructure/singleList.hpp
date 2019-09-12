@@ -1,3 +1,4 @@
+/*单向链表*/
 template <class T>
 class Node
 {
