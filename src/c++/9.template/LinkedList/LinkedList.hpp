@@ -263,7 +263,6 @@ void LinkedList<T>::insertAfter(const T &data)
     }
 }
 
-
 template <class T>
 T LinkedList<T>::deleteFront() // 删除表头结点
 {
