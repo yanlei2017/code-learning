@@ -104,5 +104,6 @@ int main(int argc, char const *argv[])
     hello.BestSolution(num, cap);
     hello.printBestSolution();
 
-    return 0;
+    return 0;gl
+    
 }
