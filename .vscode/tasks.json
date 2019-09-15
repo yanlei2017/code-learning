@@ -10,7 +10,7 @@
                 "-o",
                 "/home/yanlei/code-learning/bin/${fileBasenameNoExtension}.out",
                 "-Wall",
-                "-fno-elide-constructors"
+                "-fno-elide-constructors","-std=c++11"
             ],
             "options": {
                 "cwd": "/usr/bin"
