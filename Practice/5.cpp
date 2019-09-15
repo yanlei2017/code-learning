@@ -22,18 +22,18 @@ String
 #include <iostream>
 using namespace std;
 #include <vector>
+#include <cmath>
 /*素数定理  0～x范围内素数个数=x/ln(x) */
 int main(int argc, char const *argv[])
 {
     int n;
     cin >> n;
-    vector<int> a(1);
+    vector<int> a(1000000);
     int count = 0;
     if (n == 0)
     {
         return 1;
     }
-
     /*求质数*/
     for (int i = 2; i <= n; i++)
     {
@@ -50,27 +50,12 @@ int main(int argc, char const *argv[])
         {
             if (count == a.size())
             {
-                a.resize(count + 1);
+                a.resize(count + 10);
             }
             a[count++] = i; /*把质数保存起来用于后面试除*/
         }
     }
-    int ccc = 0;
-    while (ccc < a.size())
-    {
-        if (n % a[ccc] == 0)
-        {
-            n = n / a[ccc];
-            cout << a[ccc] << " ";
-            continue;
-        }
-        else
-        {
-            if (n == 1)
-                break;
-            ccc++;
-        }
-    }
+    cout << n - a.size() << endl;
 
     return 0;
 }

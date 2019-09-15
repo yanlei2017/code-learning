@@ -44,10 +44,17 @@ int main(int argc, char const *argv[])
     {
         cout << "error occured in deleting " << endl;
     }
+
     cout << "reverseSqlist using head insert " << endl;
 
-    sqlist *reverse = reverseSqlist(&yanlei); /*头插法翻转*/
-    printsqlist(reverse);
+    sqlist *reverse11 = reverseSqlist(&yanlei); /*头插法翻转*/
+    printsqlist(reverse11);
+    cout << "reverseSqlist with head,origin list  =" << endl;
+    printsqlist(&yanlei);
+    cout << "reversing....." << endl;
+    // reverseSqlistWithHead(&yanlei);
+    sqlist * yanleir=reverse(&yanlei);
+    printsqlist(yanleir);
 
     cout << "deleting sqlist" << endl;
     bool clearok = clearSqlist(&yanlei);

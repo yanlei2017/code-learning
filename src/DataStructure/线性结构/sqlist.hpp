@@ -167,4 +167,36 @@ sqlist *reverseSqlist(sqlist *l)
     return r;
 }
 
+void reverseSqlistWithHead(sqlist *head)
+{
+    if (head == nullptr || head->next == nullptr)
+        return;
+
+    sqlist *curr = head->next;
+    sqlist *prev = nullptr;
+    while (curr != nullptr)
+    {
+        sqlist *next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    head->next = prev;
+}
+
+/*递归翻转*/
+
+sqlist *reverse(sqlist *head)
+{
+
+    if (head == nullptr || head->next == nullptr)
+    {
+        return head;
+    }
+    sqlist *newhead = reverse(head->next);
+    head->next->next = head;
+    head->next = nullptr;
+    return newhead->next;
+}
+
 #endif __SQliST_H_
