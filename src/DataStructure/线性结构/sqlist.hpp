@@ -139,7 +139,6 @@ bool sqlistDelete(sqlist *l, int i, elemType &data)
     {
         return false;
     }
-
     sqlist *tobedelete = p->next;
     data = tobedelete->data;
     p->next = tobedelete->next;
