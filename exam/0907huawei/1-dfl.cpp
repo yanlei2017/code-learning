@@ -2,24 +2,24 @@
 	#include <bits/stdc++.h>
 using namespace std;
 int a[105];
-int n;
+int n;/*数组长度*/
 struct node
 {
 	int pos, val;
 };
-int bfs(int x)
+int bfs(int x)/*宽度优先搜索*/
 {
 	queue<node> q;
 	node start;
 	start.pos = x;
 	start.val = 0;
 	q.push(start);
-	if (start.pos == n - 1)
+	if (start.pos == n - 1)/*特殊输入*/
 	{
 		return 0;
 	}
 	q.pop();
-	for (int t = 2; t < x + (n - 1) / 2; t++)
+	for (int t = 2; t < x + (n - 1) / 2; t++) /*每次只能走len/2的长度*/
 	{
 		node nxt;
 		nxt.pos = t;
