@@ -2,53 +2,18 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "g++ build active file",
-            "command": "/usr/bin/g++",
+            "label": "g++.exe build active file",
+            "command": "C:\\MinGW\\bin\\g++.exe",
             "args": [
                 "-g",
                 "${file}",
+                "-fno-elide-constructors",
                 "-o",
-                "/home/yanlei/code-learning/bin/${fileBasenameNoExtension}.out",
-                "-Wall",
-                "-fno-elide-constructors","-std=c++11","-lpthread"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "/usr/bin"
+                "cwd": "C:\\MinGW\\bin"
             }
-        },
-        {
-            "type": "shell",
-            "label": "gcc build active file",
-            "command": "/usr/bin/gcc",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "options": {
-                "cwd": "/usr/bin"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
-        },
-        {
-            "type": "shell",
-            "label": "gcc build active file",
-            "command": "/usr/bin/gcc",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "options": {
-                "cwd": "/usr/bin"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
         }
     ],
     "version": "2.0.0"
