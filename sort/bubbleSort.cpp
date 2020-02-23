@@ -9,8 +9,8 @@
 1 2 3 4 5 6 7 8
 */
 
-#include <iostream>
-#include "printArray.hpp"
+#include <bits/stdc++.h>
+#include "sortHelper.hpp"
 using namespace std;
 
 // 1.原始的冒泡排序
@@ -59,19 +59,17 @@ void BubbleSort3(T *arr, int length) {
 }
 
 int main(int argc, char const *argv[]) {
-  int ARR_LENGTH = 8;
-  int arr1[ARR_LENGTH] = {8, 7, 6, 5, 4, 3, 2, 1};
-  int arr2[ARR_LENGTH] = {8, 7, 6, 5, 4, 3, 2, 1};
-  int arr3[ARR_LENGTH] = {8, 7, 6, 5, 4, 3, 2, 1};
+  int ARR_SIZE;
+  cout << "Input array size " << endl;
+  cin >> ARR_SIZE;
+  int arr[ARR_SIZE];
+  genereteArray(arr, ARR_SIZE, 100);
 
-  BubbleSort1(arr1, ARR_LENGTH);
-  printarray(arr1, ARR_LENGTH);
-  
-  BubbleSort2(arr2, ARR_LENGTH);
-  printarray(arr2, ARR_LENGTH);
+  BubbleSort1(arr, ARR_SIZE);
+  // BubbleSort2(arr, ARR_SIZE);
+  // BubbleSort3(arr, ARR_SIZE);
 
-  BubbleSort3(arr3, ARR_LENGTH);
-  printarray(arr3, ARR_LENGTH);
+  printSort(arr, ARR_SIZE);
 
   return 0;
 }

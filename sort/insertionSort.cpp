@@ -12,8 +12,8 @@
 */
 // 1.把第n个数插到前面合适的位置
 
-#include <iostream>
-#include "printArray.hpp"
+#include <bits/stdc++.h>
+#include "sortHelper.hpp"
 using namespace std;
 
 void insert(int arr[], int n) {
@@ -34,16 +34,16 @@ void insert(int arr[], int n) {
 void insertionSort(int arr[], int n) {
   for (size_t i = 1; i < n; i++) {
     insert(arr, i);
-    for (size_t i = 0; i < 9; i++) {
-      cout << arr[i] << " ";
-    }
-    cout << endl;
   }
 }
 
 int main(int argc, char const *argv[]) {
-  int arr[9] = {9, 7, 8, 6, 4, 5, 3, 1, 2};
-  insertionSort(arr, 9);
-  printarray(arr, 9);
+  int ARR_SIZE;
+  cout << "Input array size " << endl;
+  cin >> ARR_SIZE;
+  int arr[ARR_SIZE];
+  genereteArray(arr, ARR_SIZE, 100);
+  insertionSort(arr, ARR_SIZE);
+  printSort(arr, ARR_SIZE);
   return 0;
 }

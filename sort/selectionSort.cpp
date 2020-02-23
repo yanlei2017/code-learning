@@ -12,8 +12,8 @@
 1 2 3 4 5 6 7 8 9
 1 2 3 4 5 6 7 8 9
 */
-#include <iostream>
-#include "printArray.hpp"
+#include <bits/stdc++.h>
+#include "sortHelper.hpp"
 using namespace std;
 // 1.找出最大值的位置
 int findMaxPos(int arr[], int n) {
@@ -35,15 +35,16 @@ void selectionSort(int arr[], int n) {
     arr[pos] = arr[n - 1];
     arr[n - 1] = temp;
     n--;
-    printarray(arr, 9);
   }
 }
 
 int main(int argc, char const *argv[]) {
-  cout << "选择排序" << endl;
-  int arr[9] = {9, 7, 8, 6, 4, 5, 3, 1, 2};
-  selectionSort(arr, 9);
-  printarray(arr, 9);
-
+  int ARR_SIZE;
+  cout << "Input array size " << endl;
+  cin >> ARR_SIZE;
+  int arr[ARR_SIZE];
+  genereteArray(arr, ARR_SIZE, 100);
+  selectionSort(arr, ARR_SIZE);
+  printSort(arr, ARR_SIZE);
   return 0;
 }

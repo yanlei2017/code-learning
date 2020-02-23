@@ -2,8 +2,8 @@
 // arr = [ 2 8 9 10 4 5 6 7 ]
 //         L      M       R
 
-#include <iostream>
-
+#include <bits/stdc++.h>
+#include "sortHelper.hpp"
 using namespace std;
 /*
  0 1 2 3  4 5 6 7
@@ -66,13 +66,14 @@ void mergeSort(int *arr, int L, int R) {
 }
 
 int main(int argc, char const *argv[]) {
-  int arr[8] = {2, 66, 9, 10, 4, 5, 78, 7};
+  int ARR_SIZE;
+  cout << "Input array size " << endl;
+  cin >> ARR_SIZE;
+  int arr[ARR_SIZE];
+  genereteArray(arr, ARR_SIZE, 100);
   int L = 0;
-  int R = 7;
+  int R = ARR_SIZE - 1;
   mergeSort(arr, L, R);
-
-  for (auto &&i : arr) {
-    cout << i << " " << endl;
-  }
+  printSort(arr,ARR_SIZE);
   return 0;
 }
