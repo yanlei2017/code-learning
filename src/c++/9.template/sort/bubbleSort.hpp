@@ -13,7 +13,7 @@ void bubbleSort(T *arr, int length)
             if (arr[j] > arr[j + 1])
             {
                 sortCount++;
-                myswap(arr[j], arr[j + 1]);
+                swap(arr[j], arr[j + 1]);
             }
             sortCount++;
             for (int i = 0; i < length; i++)
@@ -36,7 +36,7 @@ void betterBubbleSort(T *arr, int length)
         {
             if (arr[j] > arr[j + 1])
             {
-                myswap(arr[j], arr[j + 1]);
+                swap(arr[j], arr[j + 1]);
                 isSorted = false;
             }
             sortCount++;
@@ -65,7 +65,7 @@ void bestBubbleSort(T *arr, int length)
         {
             if (arr[j] > arr[j + 1])
             {
-                myswap(arr[j], arr[j + 1]);
+                swap(arr[j], arr[j + 1]);
                 isSorted = false;
                 lastExchangeIndex = j;
             }

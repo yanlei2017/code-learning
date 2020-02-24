@@ -3,14 +3,6 @@
 #include <cassert>
 using namespace std;
 template <class T>
-void myswap(T &a, T &b)
-{
-    T temp = b;
-    b = a;
-    a = temp;
-}
-
-template <class T>
 void selectSort(T *arr, int n)
 {
     std::cout << "\n选择排序" << endl;
@@ -23,6 +15,6 @@ void selectSort(T *arr, int n)
             if (arr[j] < arr[leastindex]) //更新最小值下标
                 leastindex = j;
         }
-        myswap(arr[i], arr[leastindex]);
+        swap(arr[i], arr[leastindex]);
     }
 }

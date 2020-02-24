@@ -13,7 +13,7 @@ template <class T>
 void printSort(T arr[], int ARR_SIZE) {
   bool isSorted = false;
   for (size_t i = 0; i < ARR_SIZE - 1; i++) {
-    if (arr[i] < arr[i + 1]) {
+    if (arr[i] <= arr[i + 1]) {
       isSorted = true;
     } else {
       isSorted = false;
