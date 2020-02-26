@@ -38,13 +38,13 @@ void merge(int *arr, int L, int M, int R) {
       k++;
     }
   }
-  //第二阶段，左边的数组已经取完，直接把右边排好序的放入大数组中即可
+  //第二阶段，此时j=RIFHT_SIZE 右边的数组已经取完，直接把左边边排好序的放入大数组中即可
   while (i < LEFT_SIZE) {
     arr[k] = left[i];
     i++;
     k++;
   }
-  //第二阶段，右边的数组已经取完，直接把右边排好序的放入大数组中即可
+  //第二阶段，此时i=LEFT_SIZE 左边边的数组已经取完，直接把右边排好序的放入大数组中即可
   while (j < RIGHT_SIZE) {
     arr[k] = right[j];
     j++;
