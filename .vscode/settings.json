@@ -7,6 +7,9 @@
         "future": "cpp",
         "mutex": "cpp",
         "shared_mutex": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "sstream": "cpp",
+        "regex": "cpp",
+        "complex": "cpp"
     }
 }
