@@ -3,11 +3,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(int argc, char const *argv[]) {
-  int r = 1;
-  r   ? 2: 55;
+class A {
+ private:
+  int x;
 
-  r += 2 ? 2: 55;
-  cout<<r<<endl;
+ public:
+  A(int _x) : x(_x) {}
+  ~A() {}
+};
+int main(int argc, char const *argv[]) {
+int a=10;
+vector<int> b;
+while (a)
+{
+  b.push_back(a%10);
+  a=a/10;
+  /* code */
+}
+ // placement new
+
   return 0;
 }

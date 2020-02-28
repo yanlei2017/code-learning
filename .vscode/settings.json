@@ -10,6 +10,8 @@
         "iostream": "cpp",
         "sstream": "cpp",
         "regex": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "new": "cpp",
+        "bitset": "cpp"
     }
 }
