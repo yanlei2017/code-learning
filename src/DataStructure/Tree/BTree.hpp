@@ -9,7 +9,7 @@ struct BTree
     BTree *lchild;
     BTree *rchild;
 };
-
+/*根左右 前序遍历*/
 void PreOrder(BTree *t)
 {
 
@@ -21,7 +21,7 @@ void PreOrder(BTree *t)
     PreOrder(t->lchild);
     PreOrder(t->rchild);
 }
-
+/*左根右 中序遍历*/
 void InOrder(BTree *t)
 {
 
@@ -33,7 +33,7 @@ void InOrder(BTree *t)
     cout << t->data;
     InOrder(t->rchild);
 }
-
+/*左右根 后序遍历*/
 void PostOrder(BTree *t)
 {
 
@@ -45,7 +45,7 @@ void PostOrder(BTree *t)
     PostOrder(t->rchild);
     cout << t->data;
 }
-
+/*前序遍历方式 建立二叉树*/
 BTree *CreatBinTree()
 {
     BTree *bt = nullptr;
