@@ -41,6 +41,8 @@ class Solution {
         pl2 = pl2->next;
         continue;
       }
+      /*每次在取指针指向的值得时候得判断一下指针是否为空*/
+      /*每次在取指针指向的值得时候得判断一下指针是否为空*/
       if (pl1 && pl2 && pl1->val < pl2->val) {
         pans->next = new ListNode(pl1->val);
         pans = pans->next;
