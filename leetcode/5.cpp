@@ -28,9 +28,8 @@ class Solution {
     vector<string> substr;
     for (size_t i = 0; i < n; i++) {
       for (size_t j = i; j < n; j++) {
-        if (j - i + 1 > maxlen &&
-            isrString(i, j, s)) { /*这里一定先判断当前子串的长度是不是大于maxlen
-                                     ，判断回文子串很费时间的*/
+        /*这里一定先判断当前子串的长度是不是大于maxlen，判断回文子串很费时间的*/
+        if (j - i + 1 > maxlen && isrString(i, j, s)) {
           ans = s.substr(i, j - i + 1);
           maxlen = j - i + 1;
         }
