@@ -1,9 +1,9 @@
 
 /*链表的实现，链表分为单链，双链，循环链 */
-#ifndef LINK_LIST_H
-#define LINK_LIST_H
+#ifndef LINK_LIST_DUMB_H
+#define LINK_LIST_DUMB_H
 #include "list.h"
-/*单链表的结点类型*/
+/*单链表的结点类型 ，*/
 template <class T>
 class Link {
  public:
@@ -19,8 +19,12 @@ class Link {
 template <class T>
 class linkList : public List<T> {
  private:
-  Link<T> *head, *tail;          // 单链表的头、尾指针
-  Link<T> *setPos(const int p);  // 第p个元素指针
+  Link<T> *dumb, *head, *tail;  // 单链表的哑结点，头、尾指针
+  int len;
+  void setPos(
+      const int p,
+      Link<T> **node);  // 第p个元素指针，应写成私有函数，不然会造成类的内存泄漏
+
  public:
   linkList(int num);           // 构造函数
   ~linkList();                 // 析构函数
@@ -37,17 +41,34 @@ class linkList : public List<T> {
 };
 
 template <class T>
+void linkList<T>::setPos(const int p, Link<T> **node) {
+  if (p == -1) {
+    *node = head;
+    return;
+  }
+  Link<T> *tmp = head;
+  int index = 0;
+  while (index++ < p) {
+    // index++;
+    tmp = tmp->next;
+  }
+  *node = tmp;
+  return;
+}
+
+template <class T>
 linkList<T>::linkList(int num) {
   Link<T> *tmp;
   try {
-    head = new Link<T>(-1);
-    tmp = head;
-    int i = 0;
-    while (i < num - 1) {
-      tmp->next = new Link<T>(-1);
+    dumb = new Link<T>(-1);  // 哑结点
+    tmp = dumb;
+    len = 0;
+    while (len < num) {
+      tmp->next = new Link<T>(0);
       tmp = tmp->next;
-      i++;
+      len++;
     }
+    head = dumb->next;
     tail = tmp;
   } catch (const std::bad_alloc &e) {
     std::cerr << e.what() << '\n';
@@ -62,7 +83,7 @@ linkList<T>::~linkList() {
 template <class T>
 bool linkList<T>::isEmpty() {
   bool isEmpty;
-  if (head == nullptr && tail == nullptr)
+  if (dumb->next == nullptr)
     isEmpty = true;
   else
     isEmpty = false;
@@ -80,8 +101,7 @@ void linkList<T>::clear() {
       tmp = tmp->next; /*下一个要删除的*/
       delete del;      /*删除当前的*/
     }
-    delete tail;
-    head = tail = nullptr;
+    len = 0;
   } else {
     cout << "Linklist is empty, no need to clear !" << endl;
   }
@@ -89,56 +109,53 @@ void linkList<T>::clear() {
 
 template <class T>
 int linkList<T>::length() {
-  int len = 1;
-  Link<T> *tmp = head;
-  while (tmp->next) {
-    len++;
-    tmp = tmp->next;
-  }
   return len;
 }
 
 template <class T>
 bool linkList<T>::append(const T value) {
   cout << "Append " << value << endl;
-  if (head && tail) {
+  if (tail) {
     try {
       Link<T> *p = new Link<T>(value);
       tail->next = p;
       tail = tail->next;
+      len++;
       return true;
     } catch (const bad_alloc &e) {
       return -1;
     }
   } else {
-    cout << "head or tail  is nullptr ,append fail !" << endl;
+    cout << " tail  is nullptr ,append fail !" << endl;
+    return false;
   }
 }
 
 template <class T>
 bool linkList<T>::insert(const int p, const T value) {
-  int len = length();
   if (p < 0 || p > len) {
     cout << "Bad insert pos , insert fail !" << endl;
     return false;
   }
-  int index = 0;
+  int index = 1;
   Link<T> *tmp = head;
-  while (index++ < p-1) {
+  while (index <(p-1)) {
     tmp = tmp->next;
+    index++;
   }
-  Link<T> *t = tmp->next;
   try {
+  Link<T> *t = tmp->next;
+
     tmp->next = new Link<T>(value, t);
   } catch (const std::bad_alloc &e) {
     std::cerr << e.what() << '\n';
   }
+  len++;
   return true;
 }
 
 template <class T>
 bool linkList<T>::deleteAt(const int p) {
-  int len = length();
   if (p < 0 || p > len) {
     cout << "Bad delete pos , delete fail !" << endl;
     return false;
@@ -151,20 +168,21 @@ bool linkList<T>::deleteAt(const int p) {
   Link<T> *del = tmp->next;
   tmp->next = del->next;
   delete del;
+  len--;
   return true;
 }
 
 template <class T>
 bool linkList<T>::getValue(const int p, T &value) {
-  int len = length();
-  if (p < 0 || p > len) {
+  if (p < 1 || p > len) {
     cout << "Bad  pos , get Value fail !" << endl;
     return false;
   }
   Link<T> *tmp = head;
-  int index = 0;
-  while (index++ < p) {
+  int index = 1;
+  while (index < p) {
     tmp = tmp->next;
+    index++;
   }
   value = tmp->data;
   return true;
@@ -173,7 +191,7 @@ bool linkList<T>::getValue(const int p, T &value) {
 template <class T>
 bool linkList<T>::getPos(int &p, const T value) {
   Link<T> *tmp = head;
-  int pos = 0;
+  int pos = 1;
   while (tmp->data != value) {
     tmp = tmp->next;
     pos++;
@@ -188,7 +206,7 @@ void linkList<T>::printLinkList() {
           "-------------------------------------------------- "
        << endl;
   cout << "Length of Linklist  = " << length() << endl;
-  Link<T> *tmp = head;
+  Link<T> *tmp = dumb;
   int index = 0;
   while (tmp->next) {
     cout << "Node " << index++ << " = " << tmp->data << endl;
@@ -204,14 +222,14 @@ template <class T>
 void linkList<T>::up(int num) {
   cout << "set all node's data to it's index" << endl;
   clear();
-  head = new Link<T>(0);
-  Link<T> * tmp =head ;
-  int index = 0;
-  while (index<num-1) {
+  Link<T> *tmp = dumb->next;
+  int index = 1;
+  while (index <= num) {
     tmp->next = new Link<T>(index++);
-    tmp=tmp->next;
+    tmp = tmp->next;
+    len++;
   }
-  tmp->data = index;
-  tail =tmp;
+  head = dumb->next;
+  tail = tmp;
 }
 #endif

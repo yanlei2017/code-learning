@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-#include "linkList.h"
+// #include "linkList_dumb.h"  //带哑结点的链表
+#include"linkList.h"
 
 int main(int argc, char const *argv[]) {
   linkList<int> ss(10);
@@ -28,12 +29,13 @@ int main(int argc, char const *argv[]) {
   } else {
     cout << "Insert  at pos 9 fail" << endl;
   }
-
   ss.clear();
   if (ss.isEmpty())
     cout << "Linklist is empty" << endl;
   else
     cout << "Linklist is not empty" << endl;
+
   ss.append(888);
+  ss.printLinkList();
   return 0;
 }
