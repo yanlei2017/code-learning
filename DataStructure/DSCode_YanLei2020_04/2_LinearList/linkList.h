@@ -2,19 +2,9 @@
 /*链表的实现，链表分为单链，双链，循环链 */
 #ifndef LINK_LIST_H
 #define LINK_LIST_H
+#include "link.h"
 #include "list.h"
 /*单链表的结点类型 ，*/
-template <class T>
-class Link {
- public:
-  T data;         // 用于保存结点元素的内容
-  Link<T> *next;  // 指向后继结点的指针
-  Link(const T info, Link<T> *nextValue = nullptr) {
-    data = info;
-    next = nextValue;
-  }
-  Link(Link<T> *nextValue) { next = nextValue; }
-};
 
 template <class T>
 class linkList : public List<T> {
@@ -127,7 +117,7 @@ bool linkList<T>::append(const T value) {
       tail = tail->next;
       return true;
     } catch (const bad_alloc &e) {
-      cout<<e.what()<<endl;
+      cout << e.what() << endl;
       return false;
     }
   } else {
@@ -229,7 +219,7 @@ void linkList<T>::up(int num) {
   head = new Link<T>(0);
   Link<T> *tmp = head;
   int index = 1;
-  while (index < num ) {
+  while (index < num) {
     tmp->next = new Link<T>(index++);
     tmp = tmp->next;
   }
